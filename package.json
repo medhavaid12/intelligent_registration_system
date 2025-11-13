@@ -1,0 +1,18 @@
+{
+  "name": "registration-system",
+  "version": "1.0.0",
+  "description": "This project contains:\r - `web/` — registration form (HTML/CSS/JS)\r - `automation/cypress/` — Cypress end-to-end tests\r - `automation/selenium/` — simple Selenium tests (Python)\r - `screenshots/` — screenshots produced by automation\r - `registration-system.zip` — (downloadable package)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx http-server ./web -p 8000",
+    "test:e2e": "npx cypress run --spec \"automation/cypress/e2e/registration.spec.js\" --browser chrome",
+    "test:selenium": "python automation/selenium/selenium_tests.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.6.0"
+  }
+}
