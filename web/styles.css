@@ -1,0 +1,34 @@
+:root{
+	--bg1: #0f172a; /* dark navy */
+	--bg2: #0b3d91; /* deep blue */
+	--card: rgba(255,255,255,0.08);
+	--accent: #60a5fa; /* light blue */
+	--accent-2: #7c3aed; /* purple */
+}
+body{font-family:Arial,sans-serif;margin:2em;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#eef2ff;min-height:100vh}
+.container{max-width:540px;margin:auto;background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));padding:28px;border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6);backdrop-filter: blur(6px);border:1px solid rgba(255,255,255,0.06)}
+h1{text-align:center;margin-bottom:18px;font-weight:700;letter-spacing:0.6px}
+.row{margin-bottom:12px;display:flex;flex-direction:column}
+label{font-weight:700;color:var(--accent);margin-bottom:6px}
+input,select,button{padding:10px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;background:transparent;color:inherit}
+input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 4px 18px rgba(96,165,250,0.12)}
+button{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;cursor:pointer;border:none;padding:10px 14px;font-weight:700;box-shadow:0 6px 20px rgba(124,58,237,0.18);transition:transform .16s ease, box-shadow .16s ease}
+button:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(124,58,237,0.22)}
+button:disabled{background:linear-gradient(90deg,#6b7280,#9ca3af);cursor:not-allowed;box-shadow:none}
+.error{color:#ff6b6b;font-size:0.95em}
+.success{color:#9be15d;font-size:0.95em}
+
+/* Shiny dashboard header effect */
+.container::before{content:'';position:absolute;left:0;right:0;top:0;height:220px;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.06),rgba(255,255,255,0.02));transform:skewY(-6deg);border-top-left-radius:14px;border-top-right-radius:14px}
+
+/* small responsive tweak */
+@media (max-width:600px){
+	.container{margin:16px;padding:18px}
+}
+
+/* make form labels and inputs more visible */
+label small{color:#c7d2fe;font-weight:400}
+
+/* subtle floating glow */
+.container{position:relative}
+.container:hover{box-shadow:0 12px 40px rgba(2,6,23,0.7)}

@@ -1,0 +1,4 @@
+Negative: 
+Negative screenshot: automation/selenium\..\..\screenshots\negative.png
+Positive: Registration Successful! Your profile has been submitted successfully.
+Positive screenshot: automation/selenium\..\..\screenshots\positive.png
